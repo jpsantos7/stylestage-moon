@@ -17,9 +17,10 @@
     grid-gap: 1rem;
 
     > a {
-      min-height: 2em;
-      border: 2px solid currentColor;
-      color: var(--color-secondary);
+      min-height: 3em;
+      background-color: rgba(color(primary), 0.2);
+      color: var(--color-primary);
+      border-radius: var(--border-radius-round);
     }
   }
 
@@ -56,11 +57,11 @@
     position: fixed;
     right: 2vmin;
     bottom: 2vmin;
-    max-width: 30ch;
+    max-width: 35ch;
     margin-bottom: 0;
     border-radius: var(--border-radius);
-    background-color: var(--color-light);
-    box-shadow: 0 2px 5px rgba(color(primary), 0.15);
+    background-color: rgba(color(background), 0.2);
+    box-shadow: 0 0 50px 0 rgba(color(primary), 0.15);
 
     ul {
       justify-content: unset;

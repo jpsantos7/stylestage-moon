@@ -1,8 +1,60 @@
 // stylelint-disable no-descending-specificity
+html {
+  // stars
+  background: var(--color-background)
+    url("https://drive.google.com/uc?export=view&id=1hfcViazx0a6X9S4A-lFAjK5U1oXtc8ak") repeat;
+}
+
 body {
-  background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-family);
+
+  // twinkle
+  &:before {
+    content: "";
+    display: block;
+    width: 10000px;
+    height: 100%;
+    background: transparent
+      url("https://drive.google.com/uc?export=view&id=1WZzOaWIapVCik8W_6-9RzlTg_zkC-OpJ")
+      repeat;
+    background-size: 1000px 1000px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+
+    animation: move-background 70s linear infinite;
+  }
+
+  // clouds
+  &:after {
+    content: "";
+    display: block;
+    width: 10000px;
+    height: 100%;
+    background: transparent
+      url("https://drive.google.com/uc?export=view&id=1tWroH5yKPCAJDP26EsoaFPcAI3ZLyQWB")
+      repeat;
+    background-size: 1000px 1000px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+    animation: move-background 150s linear infinite;
+  }
+}
+
+@keyframes move-background {
+  from {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    transform: translate3d(1000px, 0px, 0px);
+  }
 }
 
 main {
